@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammad Khan - Senior Full-Stack Software Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header h2 {
+            font-size: 1.3em;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95em;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .summary {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #34495e;
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category h3 {
+            color: #667eea;
+            font-size: 1em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .skill-category p {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .job {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .job:last-child {
+            border-bottom: none;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .company {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .job-date {
+            color: #7f8c8d;
+            font-size: 0.95em;
+            font-style: italic;
+        }
+        
+        .tech-stack {
+            background: #e8f4f8;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: #2c3e50;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+        
+        .achievements {
+            list-style: none;
+            margin-top: 12px;
+        }
+        
+        .achievements li {
+            padding-left: 25px;
+            margin-bottom: 10px;
+            position: relative;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .achievements li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 40%;
+            background-position: 0 85%;
+            font-weight: 600;
+        }
+        
+        .education-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .education-item h3 {
+            color: #2c3e50;
+            font-size: 1.05em;
+            margin-bottom: 5px;
+        }
+        
+        .education-item p {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .achievements-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #667eea30;
+        }
+        
+        .achievements-box ul {
+            list-style: none;
+        }
+        
+        .achievements-box li {
+            padding-left: 25px;
+            margin-bottom: 12px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .achievements-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HAMMAD KHAN</h1>
+            <h2>Senior Full-Stack Software Engineer</h2>
+            <div class="contact-info">
+                <div class="contact-item">📞 647-267-1033</div>
+                <div class="contact-item">📧 hammadullahkhan@gmail.com</div>
+                <div class="contact-item">📍 Brampton, ON</div>
+            </div>
+            <div class="contact-info" style="margin-top: 10px;">
+                <div class="contact-item">🔗 linkedin.com/in/hammadullahkhan</div>
+                <div class="contact-item">💻 github.com/hammadullahkhan</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <div class="summary">
+                    Senior Full-Stack Engineer with <span class="highlight">15+ years</span> architecting AI-integrated, cloud-native applications for Fortune 500 clients including CIBC, Informatica, and Ericsson. Proven expertise in <span class="highlight">reducing infrastructure costs by 40%+</span>, <span class="highlight">improving system performance by 60%+</span>, and leading distributed teams to deliver scalable solutions serving millions of users. Specialized in healthcare (HL7/FHIR), fintech, and enterprise SaaS platforms using modern stacks and AI-powered development tools.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>🤖 AI-Powered Development</h3>
+                        <p>Cursor AI, GitHub Copilot, DeepSeek, ChatGPT, Prompt Engineering</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>☁️ Cloud & Infrastructure</h3>
+                        <p>AWS (EC2, S3, Lambda, DynamoDB, RDS, SQS), Azure, Terraform</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>⚙️ Backend Development</h3>
+                        <p>Python, Node.js, PHP, Java, Django, NestJS, Spring Boot, Laravel, Express, RESTful APIs, GraphQL, Microservices</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🎨 Frontend Development</h3>
+                        <p>React, Angular, TypeScript, JavaScript, RxJS, Redux, NGRX, React Native</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>💾 Databases & Caching</h3>
+                        <p>PostgreSQL, MySQL, MongoDB, DynamoDB, Redis, Memcached, Prisma ORM</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>🔧 DevOps & Tools</h3>
+                        <p>Docker, Jenkins, CI/CD, Git, Agile/Scrum, Jest, Jasmine, Karma</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title"><span class="company">CCSI OBIX</span> | Senior Software Engineer</div>
+                            <div style="color: #7f8c8d; margin-top: 5px;">Remote, Chicago, IL</div>
+                        </div>
+                        <div class="job-date">May 2022 - Present</div>
+                    </div>
+                    <div class="tech-stack">Tech: AI Tools, Python, Node.js, AWS, Angular, React, React Native, TypeScript, PostgreSQL, HL7/FHIR</div>
+                    <ul class="achievements">
+                        <li><span class="highlight">Led architecture redesign</span> of HL7-compliant fetal monitoring platform, scaling capacity 60% from 900 to 10,000+ concurrent clinical panels while maintaining 99.99% SLA across 900+ hospitals nationwide</li>
+                        <li><span class="highlight">Engineered AI-assisted development workflow</span> using Cursor AI and GitHub Copilot, accelerating feature delivery by 50% and reducing code review cycles by 35%</li>
+                        <li><span class="highlight">Optimized critical healthcare API performance</span> by 55%, preventing potential patient data access issues affecting 50,000+ daily clinical users</li>
+                        <li>Reduced operational overhead by 30% through centralized logging system implementation</li>
+                        <li>Mentored 5 junior engineers and managed offshore teams across 3 time zones, improving sprint velocity by 40%</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title"><span class="company">Informatica</span> | Senior Software Engineer</div>
+                            <div style="color: #7f8c8d; margin-top: 5px;">Remote, Toronto, ON</div>
+                        </div>
+                        <div class="job-date">Sep 2020 - May 2022</div>
+                    </div>
+                    <div class="tech-stack">Tech: Node.js, AWS, Angular 10, React, TypeScript, Jest, Microservices, AODA/WCAG 508</div>
+                    <ul class="achievements">
+                        <li><span class="highlight">Architected Entity 360 golden record solution</span> supporting 1M+ workflow executions monthly across Fortune 500 customers</li>
+                        <li><span class="highlight">Achieved full AODA and WCAG 508 compliance</span>, reducing accessibility-related support tickets by 65%</li>
+                        <li>Designed Provisioning 360 UI enabling 500+ enterprise clients to configure custom workflows without engineering support</li>
+                        <li>Improved application performance by 45% through lazy loading and intelligent caching strategies</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title"><span class="company">CIBC Wealth Management</span> | Senior Software Engineer (Lead)</div>
+                            <div style="color: #7f8c8d; margin-top: 5px;">Toronto, ON</div>
+                        </div>
+                        <div class="job-date">Sep 2018 - May 2019</div>
+                    </div>
+                    <div class="tech-stack">Tech: Angular 7, TypeScript, RxJS, NGRX, Karma/Jasmine, Agile/Scrum</div>
+                    <ul class="achievements">
+                        <li><span class="highlight">Led team of 8 developers</span> delivering 15+ quarterly features for $1.2B wealth management platform, beating deadlines by 20%</li>
+                        <li>Delivered high-stakes features for portfolio management and trading interfaces serving 100,000+ wealth management clients</li>
+                        <li>Established frontend architecture standards reducing development time for new features by 30%</li>
+                        <li>Implemented CI/CD improvements reducing deployment time from 2 hours to 15 minutes</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title"><span class="company">Ericsson Canada</span> | Senior Software Engineer</div>
+                            <div style="color: #7f8c8d; margin-top: 5px;">Mississauga, ON</div>
+                        </div>
+                        <div class="job-date">2015 - 2018</div>
+                    </div>
+                    <div class="tech-stack">Tech: Angular 5, Java Spring Boot, TypeScript, MEAN Stack, Microservices</div>
+                    <ul class="achievements">
+                        <li><span class="highlight">Built Standalone ECM from scratch</span> using Angular 5 and Java Spring Boot, delivering 2 months ahead of schedule</li>
+                        <li>Engineered Unified Regression Dashboard cutting report generation time by 70% for 50+ engineering teams</li>
+                        <li>Optimized Unified Workstation render performance by 70% through intelligent caching for 10,000+ telecom operators</li>
+                        <li>Resolved 90% of critical defects improving client satisfaction scores by 40%</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title"><span class="company">Hubub</span> | Senior Software Engineer</div>
+                            <div style="color: #7f8c8d; margin-top: 5px;">Remote, Toronto, ON</div>
+                        </div>
+                        <div class="job-date">Nov 2011 - May 2015</div>
+                    </div>
+                    <div class="tech-stack">Tech: PHP, Laravel, AWS (EC2, RDS, S3, DynamoDB, SQS), PostgreSQL, Redis, AngularJS</div>
+                    <ul class="achievements">
+                        <li><span class="highlight">Architected and scaled social media platform</span> to 500,000+ daily active users, generating $2M+ annual revenue</li>
+                        <li>Designed and implemented ad server serving 500,000+ daily impressions with real-time bidding capabilities</li>
+                        <li>Led database migration from MySQL to PostgreSQL achieving zero downtime and 40% query performance improvement</li>
+                        <li>Implemented caching strategy reducing database load by 60% and improving page load times by 50%</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Key Achievements</h2>
+                <div class="achievements-box">
+                    <ul>
+                        <li>Successfully scaled healthcare platform serving <strong>900+ hospitals</strong> with <strong>99.99% uptime SLA</strong></li>
+                        <li>Led distributed teams across <strong>3 continents</strong> delivering complex enterprise solutions</li>
+                        <li>Achieved <strong>60%+ performance improvements</strong> through architecture optimization and AI-assisted development</li>
+                        <li>Generated <strong>$2M+ revenue</strong> through ad platform engineering and optimization</li>
+                        <li>Consistently delivered projects <strong>20-50% ahead of schedule</strong> while maintaining quality standards</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <p>Algoma University | Ontario, Canada | 2009</p>
+                </div>
+                <div class="education-item">
+                    <h3>Bachelor in Information Technology</h3>
+                    <p>Al-Khair University | AJK, Pakistan | 2002</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
